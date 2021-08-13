@@ -542,7 +542,7 @@ section.width >div{
         margin-bottom: 5vh;
     }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:420px) {
     nav .btn-primary{
         padding: 10px;
         min-width: 80px;
