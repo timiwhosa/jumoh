@@ -1,8 +1,8 @@
-const express = require("express")
-const path = require("path")
+const express = require("express");
+const path = require("path");
 const app = express();
 
-const Port = process.env.Port || 3002;
+const Port = process.env.PORT || 3002;
 
 
 // constants
