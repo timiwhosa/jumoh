@@ -78,6 +78,10 @@ button{
 .border-btn:hover{
     background-color: var(--blue);
     color: var(--white);
+    box-shadow: 2px 2px 4px var(--lighterblue), 0 0 2px var(--blackshadow);
+}
+.border-btn:active{
+    box-shadow: inset 5px 5px 10px var(--lighterblue), inset  5px 5px 10px #026fbb14, inset  -5px 5px 10px #16c09b1f;
 }
 .b{
     font-weight: 600;
@@ -205,7 +209,15 @@ nav .nav-ctn a:hover{
     text-decoration: underline;
 }
 nav .menu{
-    margin-left: 2vw;
+    margin-left: 3vw;
+}
+nav .menu span{
+    display: block;
+    width: 10vw;
+    height: 6px;
+    background-color: var(--lightblue);
+    margin: 1.7vw 0;
+    border-radius: 20px;
 }
 
 
@@ -223,10 +235,15 @@ nav .menu{
 .hero-ctn{
     width: 40vw;
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     display: grid;
     grid-gap: 5vh;
+    max-width: 500px;
+    -webkit-animation: slideright 3s; /* Safari 4+ */
+    -moz-animation:    slideright 3s; /* Fx 5+ */
+    -o-animation:      slideright 3s; /* Opera 12+ */
+    animation:         slideright 3s; /* IE 10+, Fx 29+ */
 }
 .hero-ctn h1{
     font-size: 3rem;
@@ -234,7 +251,11 @@ nav .menu{
 .hero-ctn p{
     font-size: 1.2rem;
     line-height: 2rem;
-    max-width: 500px;
+    max-width: 420px;
+    color: var(--lightblue);
+}
+.hero-ctn p span{
+    /* text-decoration: underline; */
 }
 .hero-ctn button{
     padding: 15px;
@@ -250,6 +271,10 @@ nav .menu{
     grid-template-columns: 1fr 1fr;
     width: 40vw;
     height: 70vh;
+    -webkit-animation: slideleft 3s; /* Safari 4+ */
+    -moz-animation:    slideleft 3s; /* Fx 5+ */
+    -o-animation:      slideleft 3s; /* Opera 12+ */
+    animation:         slideleft 3s; /* IE 10+, Fx 29+ */
 }
 .hero-img > div:nth-child(1){
     position: relative;
@@ -299,6 +324,9 @@ nav .menu{
 .hero-bottom-ctn .b{
     padding: 0 0 10px 0;
 }
+.hero-bottom-ctn p {
+    color: var(--lightblue);
+}
 
 section.width >div{
     padding-bottom: 20vh;
@@ -319,6 +347,7 @@ section.width >div{
 .intro video{
     width: 30vw;
     height: 30vw;
+    background-color: var(--blackshadow);
 }
 .intro .intro-right div{
     font-size: 3rem;
@@ -338,9 +367,11 @@ section.width >div{
     max-width: 150px;
     font-size: 1.3rem;
     color: var(--lighterblue);
+    background-color: transparent;
 }
 .intro .intro-right .btn:hover{
     color: var(--white);
+    background-color: var(--blue);
 }
 
 /* section width */
@@ -429,11 +460,17 @@ section.width >div{
     grid-gap: 10px;
     padding-bottom: 10px;
 }
-.free-grid span{
+.free-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 25px;
+    grid-gap: 6px;
+}
+.free-grid div{
     background-color: var(--lighterblue);
     border-radius: 200px;
     padding: 5px;
-    margin: 10px 5px;
+    text-align: center;
 }
 /* become-a-instructor */
 .become-a-instructor{
@@ -499,7 +536,22 @@ section.width >div{
     line-height: 1.7rem;
     color: var(--lightblue);
 }
-
+footer{
+    font-size: 1.2rem;
+    display: grid;
+    grid-gap: 20px;
+    padding: 40px 0;
+}
+footer ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr );
+    margin: 0 auto;
+    text-align: center;
+    max-width: 900px;
+}
+footer ul a{
+    text-decoration: underline;
+}
 @media screen and (max-width:720px) {
     .intro .intro-right div, .intro .intro-right p{
         max-width: 100%;
@@ -524,6 +576,7 @@ section.width >div{
     }
     .grid-2{
         grid-template-columns: 1fr;
+        width: 100%;
     }
     .hero{
         min-height: 175vh;
@@ -543,6 +596,9 @@ section.width >div{
     }
 }
 @media screen and (max-width:480px) {
+    :root{
+        --width: 90vw;
+    }
     nav .btn-primary{
         padding: 10px;
         min-width: 80px;
@@ -569,4 +625,45 @@ section.width >div{
     .become-a-instructor .btn{
         padding: 20px;
     }
+    section.width >div{
+        padding-bottom: 0;
+        min-height: 100vh;
+    }
 }
+
+
+
+@-webkit-keyframes slideright {
+  0%   { opacity: 0; margin-left: -50%; top: 20%; }
+  100% { opacity: 1; margin-left: 0; top: 55%; }
+}
+@-moz-keyframes slideright {
+  0%   { opacity: 0; margin-left: -50%; top: 20%; }
+  100% { opacity: 1; margin-left: 0; top: 55%; }
+}
+@-o-keyframes slideright {
+  0%   { opacity: 0; margin-left: -50%; top: 20%; }
+  100% { opacity: 1; margin-left: 0; top: 55%; }
+}
+@keyframes slideright {
+  0%   { opacity: 0; margin-left: -50%; top: 20%; }
+  100% { opacity: 1; margin-left: 0; top: 55%; }
+}
+
+@-webkit-keyframes slideleft {
+  0%   { opacity: 0; margin-right: -50%; top: 20%; }
+  100% { opacity: 1; margin-right: 0; top: 50%; }
+}
+@-moz-keyframes slideleft {
+  0%   { opacity: 0; margin-right: -50%; top: 20%; }
+  100% { opacity: 1; margin-right: 0; top: 50%; }
+}
+@-o-keyframes slideleft {
+  0%   { opacity: 0; margin-right: -50%; top: 20%; }
+  100% { opacity: 1; margin-right: 0; top: 50%; }
+}
+@keyframes slideleft {
+  0%   { opacity: 0; margin-right: -50%; top: 20%; }
+  100% { opacity: 1; margin-right: 0; top: 50%; }
+}
+
