@@ -1,56 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jumoh</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <div class="hero grid-2 hero-width">
-        <div class="left">
-            <div class="gif absolute">
-                <img src="/img/illustrations/jumoh gif.gif" alt="">
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="bg-white">
+      <div class="nav-logo">
+        <a href="/"><img src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
+      </div>
+      <div class="nav-ctn flex">
+          <div class="nav-search">
+              <form action="" class="flex">
+                  <input type="search" name="" id="search" placeholder="Search for Courses">
+                  <button type="submit"><img src="/img/icons/search.png" alt="search-icon"></button>
+              </form>
+          </div>
+          <div class="menu hide-on-large">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        <div class="nav-ctn-left flex hide-on-small">
+          <p>Pages</p>
+          <a href="#"><p>Courses</p></a>
+          <a href="#"><p>Become a tutor</p></a>
+        </div>
+        <div class="nav-ctn-right hide-on-small">
+          <button class="btn btn-primary flex bg-secondary">
+            <span><img src="/img/icons/user.png" alt="" /></span>
+            <span>Login/Register</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="cover"></div>
+    <div class="side-nav hide-on-large">
+        <div class="logo">
+            <a href="/"><img src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+
+    <section class="width hero-section">
+      <div class="hero grid-2">
+        <div class="hero-left flex">
+          <div class="hero-main">
+            <h1>The World's Leading Distance-Learning Provider</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse.
+            </p>
+            <button class="btn btn-primary flex bg-secondary">
+              <span><img src="/img/icons/user.png" alt="login" /></span>
+              <span>Join for free</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-right flex">
+          <img src="/img/illustrations/ladyonvr.png" alt="jumoh intro" />
+        </div>
+      </div>
+    </section>
+    <section class="bg-secondary-light">
+      <div class="jumoh-section-title center">
+        <h2 class="center">Online Coaching Lessons For Remote Learning​</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <section class="width intro-section">
+        <div class="jumoh-feature bg-white">
+          <div class="feature-icon">
+            <img src="/img/icons/live2.png" alt="" />
+            <div class="features-bg">
+              <img src="/img/icons/live2.png" alt="" />
             </div>
-            <div class="vector grid-2">
-                <img src="/img/illustrations/Jumoh vector1.jpg" alt="">
-                <div class="logo">
-                    <div class="">
-                        <img src="/img/logo/jumoh-dot1.png" alt="" class="logo-dot">
-                        <img src="/img/logo/JUMOH 1edit.png" alt="">
-                        <img src="/img/logo/jumoh-dot1.png" alt="" class="logo-dot">
+          </div>
+          <h3>Learn the Latest Skills</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+          <p>
+            <a href="/login">Start Today!</a>
+          </p>
+        </div>
+        <div class="jumoh-feature bg-white">
+          <div class="feature-icon">
+            <img src="/img/icons/live2.png" alt="" />
+            <div class="features-bg">
+              <img src="/img/icons/live2.png" alt="" />
+            </div>
+          </div>
+          <h3>Learn the Latest Skills</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+          <p>
+            <a href="/login">Start Today!</a>
+          </p>
+        </div>
+        <div class="jumoh-feature bg-white">
+          <div class="feature-icon">
+            <img src="/img/icons/live2.png" alt="" />
+            <div class="features-bg">
+              <img src="/img/icons/live2.png" alt="" />
+            </div>
+          </div>
+          <h3>Learn the Latest Skills</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+          <p>
+            <a href="/login">Start Today!</a>
+          </p>
+        </div>
+      </section>
+    </section>
+    
+    <section >
+      <div class="jumoh-section-title center">
+        <h2 class="center">Top Selling Courses</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <section class="width intro-section top-course">
+        <div class="course card">
+            <a href="#">
+                <img src="/img/illustrations/ladyonvr.png" alt="">
+            </a>
+            <div class="course-price flex white">
+                <span>
+                    $300
+                </span>
+            </div>
+            <div class="course-details">
+                <div class="course-tutor flex">
+                    <img src="/img/illustrations/ladyonvr.png" alt="">
+                    <span>Lorem ipsum dolor </span>
+                </div>
+                <a href="#"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, cupiditate!</h3></a>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quos velit nobis sunt deleniti ratione ea vitae ullam, consequuntur cum nesciunt?
+                </p>
+                <div class="course-summary-main flex">
+                    <div class="course-summary flex">
+                        <img src="/img/icons/user.png" alt="">
+                        <span>15 lessons</span>
+                    </div>
+                    <div class="course-summary flex">
+                        <img src="/img/icons/user.png" alt="">
+                        <span>2000 enrolled</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-ctn">
-                <h1>
-                    The worlds Leading Virtual Learning Platform
-                </h1>
-                <button class="btn primary-btn ">
-                    Join for free
-                </button>
-            </div>
-            <div class="menu hide-on-large">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
-        <div class="right">
-            <nav class="hide-on-small">
-                <ul>
-                    <a href="/pages"><li>Pages</li></a>
-                    <li>Home</li>
-                    <li>Courses</li>
-                    <a href="/pages"><li>Become a tutor</li></a>
-                    <a href="/login"><li><button class="btn primary-btn bsh1">Pages</button></li></a>
-                </ul>
-            </nav>
-            <div class="hero-img">
+        <div class="course card">
+            <a href="#">
                 <img src="/img/illustrations/ladyonvr.png" alt="">
+            </a>
+            <div class="course-price flex white">
+                <span>
+                    $300
+                </span>
+            </div>
+            <div class="course-details">
+                <div class="course-tutor flex">
+                    <img src="/img/illustrations/ladyonvr.png" alt="">
+                    <span>Lorem ipsum dolor </span>
+                </div>
+                <a href="#"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, cupiditate!</h3></a>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quos velit nobis sunt deleniti ratione ea vitae ullam, consequuntur cum nesciunt?
+                </p>
+                <div class="course-summary-main flex">
+                    <div class="course-summary flex">
+                        <img src="/img/icons/user.png" alt="">
+                        <span>15 lessons</span>
+                    </div>
+                    <div class="course-summary flex">
+                        <img src="/img/icons/user.png" alt="">
+                        <span>2000 enrolled</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+        <div class="course card">
+            <a href="#">
+                <img src="/img/illustrations/ladyonvr.png" alt="">
+            </a>
+            <div class="course-price flex white">
+                <span>
+                    $300
+                </span>
+            </div>
+            <div class="course-details">
+                <div class="course-tutor flex">
+                    <img src="/img/illustrations/ladyonvr.png" alt="">
+                    <span>Lorem ipsum dolor </span>
+                </div>
+                <a href="#"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, cupiditate!</h3></a>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quos velit nobis sunt deleniti ratione ea vitae ullam, consequuntur cum nesciunt?
+                </p>
+                <div class="course-summary-main flex">
+                    <div class="course-summary flex">
+                        <img src="/img/icons/user.png" alt="">
+                        <span>15 lessons</span>
+                    </div>
+                    <div class="course-summary flex">
+                        <img src="/img/icons/user.png" alt="">
+                        <span>2000 enrolled</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </section>
+    <section class="bg-primary-light stats">
+        <section class="site-stats intro-section">
+            <div class="site-stat">
+                <h1>
+                    3000+
+                </h1>
+                <p>
+                    Enrolled
+                </p>
+            </div>
+            <div class="site-stat">
+                <h1>
+                    3000+
+                </h1>
+                <p>
+                    Enrolled
+                </p>
+            </div>
+            <div class="site-stat">
+                <h1>
+                    3000+
+                </h1>
+                <p>
+                    Enrolled
+                </p>
+            </div>
+            <div class="site-stat">
+                <h1>
+                    3000+
+                </h1>
+                <p>
+                    Enrolled
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <section>
+        <div class="grid-2">
+            <div class="brand-section">
+                <div class="logo">
+                    <a href="/"><img src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
+                </div>
+                <div class="social flex">
+                    <div class="social-icon">
+                        <a href="#"><img src="/img/social/whatsapp.png" alt="jumoh whatsapp"></a>
+                    </div>
+                    <div class="social-icon">
+                        <a href="#"><img src="/img/social/whatsapp.png" alt="jumoh whatsapp"></a>
+                    </div>
+                    <div class="social-icon">
+                        <a href="#"><img src="/img/social/whatsapp.png" alt="jumoh whatsapp"></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-extra flex">
+                    <a href="#"><p>Privacy Policy</p></a>
+                    <a href="#"><p>Privacy Policy</p></a>
+                    <a href="#"><p>Privacy Policy</p></a>
+            </div>
+        </div>
+        <p class="center">
+            Copyright Jumoh
+        </p>
+    </section>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", (e)=>{
+            if(document.documentElement.scrollTop > 250){
+                document.querySelector("nav").classList.add("active");
+            }else{
+                document.querySelector("nav").classList.remove("active");
+            }
+        });
+
+        var cover = document.getElementsByClassName('cover')[0];
+        document.getElementsByClassName("menu")[0].addEventListener("click", sidenavtoogle);
+        cover.addEventListener("click", sidenavtoogle);
+        function sidenavtoogle(e){
+            var sidenav = document.getElementsByClassName('side-nav')[0]
+            if(sidenav.style.left==="0px"){
+                sidenav.style.left="-100vw"
+                cover.style.left="-120vw"
+            }else{
+                sidenav.style.left = 0;
+                cover.style.left = 0;
+            }
+        }
+
+
+    </script>
+  </body>
 </html>
