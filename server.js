@@ -14,6 +14,9 @@ app.use(express.static(public));
 app.get("/", (req, res) => {
     res.sendFile(public + "/index.html");
 })
+app.get("/singlecourse/:id", (req, res) => {
+  res.sendFile(public + "/html/singlecourse.html");
+});
 
 
 
