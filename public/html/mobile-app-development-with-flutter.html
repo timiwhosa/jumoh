@@ -33,8 +33,8 @@
           <span></span>
         </div>
         <div class="nav-ctn-left flex hide-on-small">
-          <p>Pages</p>
-          <a href="#"><p>Courses</p></a>
+          <!-- <p>Pages</p>
+          <a href="#"><p>Courses</p></a> -->
           <a href="#"><p>Become a tutor</p></a>
         </div>
         <div class="nav-ctn-right hide-on-small">
@@ -65,9 +65,9 @@
       <ul class="">
         <li><a href="/">Home</a></li>
         <li>singleCourse</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        <li>Mobile app development with flutter</li>
       </ul>
-      <h2>The Complete Digital Marketing Course - 12 Courses in 1</h2>
+      <h2>Mobile App Development with Flutter</h2>
       <div class="course-rating flex">
         <div class="rating">
           <span>star</span>
@@ -81,23 +81,31 @@
     </section>
     <section class="course-details">
       <div class="course-hero-img">
-        <img src="/img/jpg/team working.jpg" alt="jumoh course" />
+        <img
+          src="/img/courses/flutter/Learning the Dart Programming Language.jpg"
+          alt="jumoh course"
+        />
       </div>
       <div class="full-course-details width">
         <div class="course-tab flex">
-          <div class="active">Overview</div>
-          <div class="">Curriculum</div>
-          <div class="">Instructor</div>
+          <div class="active"><a href="#overview">Overview </a></div>
+          <div class=""><a href="#curriculum">Curriculum </a></div>
+          <div class=""><a href="#instructor">Instructor </a></div>
         </div>
         <div class="course-details-section">
-          <div class="course-overview">
+          <div class="course-overview" id="overview">
             <section class="">
               <div class="course-video">
                 <div class="video-img">
                   <img src="/img/jpg/team working.jpg" alt="jumoh team" />
-                  <div class="play-btn">hi</div>
+                  <div class="play-btn" onclick="openvideo('https://www.youtube.com/embed/PGLeZK_9Y6Q?start=1')"><img src="/img/icons/play.png" alt=""></div>
                 </div>
               </div>
+              <div class="overlay-video">
+                <div class="cover" onclick="closevideo()"></div>
+                <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
               <div class="course-description">
                 <div class="desc">
                   <h3>Course Description</h3>
@@ -111,22 +119,22 @@
                 <div class="extra">
                   <p>
                     <span>
-                        <span class="course-icon">lll</span>
-                        <span><b>Duration</b></span>
+                      <span class="course-icon">lll</span>
+                      <span><b>Duration</b></span>
                     </span>
                     <span>20Hrs</span>
                   </p>
                   <p>
                     <span>
-                        <span class="course-icon">lll</span>
-                        <span><b>Lessons</b></span>
+                      <span class="course-icon">lll</span>
+                      <span><b>Lessons</b></span>
                     </span>
                     <span>20</span>
                   </p>
                   <p class="price">
                     <span>
-                        <span class="course-icon">lll</span>
-                        <span class="course-icon"><b>Price</b></span>
+                      <span class="course-icon">lll</span>
+                      <span class="course-icon"><b>Price</b></span>
                     </span>
                     <span class="price-figure">$60</span>
                   </p>
@@ -138,7 +146,7 @@
               </div>
             </section>
           </div>
-          <div class="course-curriculum width">
+          <div class="course-curriculum width" id="curriculum">
             <h3>What You will Learn</h3>
             <div class="course-curriculum-list">
               <ul>
@@ -147,7 +155,7 @@
                     ><span class="icon"
                       ><img src="/img/icons/user.png" alt=""
                     /></span>
-                    <span>Lorem ipsum</span></a
+                    <span>Learning the Dart Programming Language</span></a
                   >
                 </li>
                 <li>
@@ -155,7 +163,7 @@
                     ><span class="icon"
                       ><img src="/img/icons/user.png" alt=""
                     /></span>
-                    <span>Lorem ipsum</span></a
+                    <span>IDE for flutter developers</span></a
                   >
                 </li>
                 <li>
@@ -163,7 +171,7 @@
                     ><span class="icon"
                       ><img src="/img/icons/user.png" alt=""
                     /></span>
-                    <span>Lorem ipsum</span></a
+                    <span>User Interfaces - Flutter Widgets</span></a
                   >
                 </li>
                 <li>
@@ -171,26 +179,99 @@
                     ><span class="icon"
                       ><img src="/img/icons/user.png" alt=""
                     /></span>
-                    <span>Lorem ipsum</span></a
+                    <span>Styles</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Assets</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Static User Interface</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Dynamic User Interface</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Animation</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Storage</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>External Libraries For Flutter Developers</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Behavior Components</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>State Management in Flutter</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img src="/img/icons/user.png" alt=""
+                    /></span>
+                    <span>Firebase</span></a
                   >
                 </li>
               </ul>
             </div>
           </div>
-          <div class="course-instructor width">
-              <h3>Instructor</h3>
+          <div class="course-instructor width" id="instructor">
+            <h3>Instructor</h3>
             <div class="grid-2">
-              <img src="/img/jpg/team.jpg" alt="" />
+              <img src="/img/courses/flutter/tutor-Learning the Dart Programming Language.jpg" alt="" />
               <div class="instructor-details">
-                <h3>Lorem ipsum dolor sit.</h3>
+                <h3>Muogho Edirin.</h3>
                 <p class="secondary">
-                  Lorem ipsum dolor sit amet. Lorem
+                  Professional Mobile App Developer with 4+ years of experience.
                 </p>
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptatibus exercitationem fuga excepturi alias! Repudiandae,
-                  quod hic enim magni dolores a ex provident. Cupiditate veniam,
-                  quisquam consequatur sit dolorum quae sapiente?
+                  Strong Experience with Java, Kotlin, and Dart Programming.
+                  Flutter, Swift, UI/UX design experience. Passionate about
+                  robust Code design. Familiarity with common architectural
+                  practices and principles. Ability to quickly absorb technical
+                  concepts and communicate them to a non-technical audience.
                 </p>
               </div>
             </div>
@@ -266,6 +347,16 @@
           sidenav.style.left = 0;
           cover.style.left = 0;
         }
+      }
+      function closevideo(){
+        var overVideo = document.getElementsByClassName("overlay-video")[0];
+        overVideo.style.display = "none";
+        overVideo.children[1].setAttribute("src","")
+      }
+      function openvideo(src){
+        var overVideo = document.getElementsByClassName("overlay-video")[0];
+        overVideo.style.display = "block";
+        overVideo.children[1].setAttribute("src",src)
       }
     </script>
 

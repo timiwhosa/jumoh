@@ -15,7 +15,8 @@ app.get("/", (req, res) => {
     res.sendFile(public + "/index.html");
 })
 app.get("/singlecourse/:id", (req, res) => {
-  res.sendFile(public + "/html/singlecourse.html");
+  var id = req.params.id;
+  res.sendFile(public + "/html/"+ id+".html");
 });
 
 
