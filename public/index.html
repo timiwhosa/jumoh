@@ -85,8 +85,8 @@
       <div class="jumoh-section-title center">
         <h2 class="center">Online Coaching Lessons For Remote Learning​</h2>
         <p>
-              Don't waste your valuable resources or time. In Jumoh we focus on
-              the most important things
+          Don't waste your valuable resources or time. In Jumoh we focus on the
+          most important things
         </p>
       </div>
       <section class="width intro-section">
@@ -131,7 +131,8 @@
           </div>
           <h3>Real-time Chat</h3>
           <p>
-              Chat with our experts 24/7 on any problem, issue, or challenge you may face during a course.
+            Chat with our experts 24/7 on any problem, issue, or challenge you
+            may face during a course.
           </p>
           <p>
             <a href="/login">Start Today!</a>
@@ -144,8 +145,9 @@
       <div class="jumoh-section-title center">
         <h2 class="center">Top Selling Courses</h2>
         <p>
-          We believe that there is more to online learning, that is why we are bridging 
-          the Gap of physical learning with virtual experience with the use of Technology.
+          We believe that there is more to online learning, that is why we are
+          bridging the Gap of physical learning with virtual experience with the
+          use of Technology.
         </p>
       </div>
       <section class="width intro-section top-course">
@@ -259,7 +261,22 @@
     <section class="width video-section">
       <div class="video-img">
         <img src="/img/jpg/team.jpg" alt="jumoh team" />
-        <div class="play-btn">hi</div>
+        <div
+          class="play-btn"
+          onclick="openvideo('https://www.youtube.com/embed/PGLeZK_9Y6Q?start=1')"
+        >
+          <img src="/img/icons/play.png" alt="" />
+        </div>
+      </div>
+      <div class="overlay-video">
+        <div class="cover" onclick="closevideo()"></div>
+        <iframe
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <!-- Photo by <a href="https://unsplash.com/@hannahbusing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hannah Busing</a> on <a href="https://unsplash.com/s/photos/team?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
     </section>
@@ -290,21 +307,21 @@
       <section class="footer-section width">
         <div class="grid-3 white">
           <div class="footer-brand">
-            <img src="/img/logo/JUMOH white.png" alt="">
+            <img src="/img/logo/JUMOH white.png" alt="" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Voluptatum rem, eius error quaerat optio nisi hic suscipit numquam 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum rem, eius error quaerat optio nisi hic suscipit numquam
               dicta possimus.
             </p>
             <div class="social-icons">
               <a href="#">
-                <img src="/img/social/whatsapp.png" alt="">
+                <img src="/img/social/whatsapp.png" alt="" />
               </a>
               <a href="#">
-                <img src="/img/social/whatsapp.png" alt="">
+                <img src="/img/social/whatsapp.png" alt="" />
               </a>
               <a href="#">
-                <img src="/img/social/whatsapp.png" alt="">
+                <img src="/img/social/whatsapp.png" alt="" />
               </a>
             </div>
           </div>
@@ -321,7 +338,7 @@
           <div class="footer-address footer-ctn">
             <h3 class="white">Address</h3>
             <ul>
-              <a href="#"><li>Alaba Layout Akure </li></a>
+              <a href="#"><li>Alaba Layout Akure</li></a>
               <a href="tel:+2347066790766"><li>+234 7066790766</li></a>
               <a href="mailto:help@juhmo.com"><li>help@juhmo.com</li></a>
               <a href="#"><li>+55 785 4578964</li></a>
@@ -354,6 +371,16 @@
           sidenav.style.left = 0;
           cover.style.left = 0;
         }
+      }
+      function closevideo(){
+        var overVideo = document.getElementsByClassName("overlay-video")[0];
+        overVideo.style.display = "none";
+        overVideo.children[1].setAttribute("src","")
+      }
+      function openvideo(src){
+        var overVideo = document.getElementsByClassName("overlay-video")[0];
+        overVideo.style.display = "block";
+        overVideo.children[1].setAttribute("src",src)
       }
     </script>
 

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogging Masterclass – The Secret to Creating a 6 Figure Blog in 2021</title>
+    <title>
+      Blogging Masterclass – The Secret to Creating a 6 Figure Blog in 2021
+    </title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/singlecoursestyle.css" />
   </head>
@@ -67,7 +69,9 @@
         <li>singleCourse</li>
         <li>Blogging Masterclass</li>
       </ul>
-      <h2>Blogging Masterclass – The Secret to Creating a 6 Figure Blog in 2021</h2>
+      <h2>
+        Blogging Masterclass – The Secret to Creating a 6 Figure Blog in 2021
+      </h2>
       <div class="course-rating flex">
         <div class="rating">
           <span>star</span>
@@ -81,7 +85,10 @@
     </section>
     <section class="course-details">
       <div class="course-hero-img">
-        <img src="/img/courses/blogging/Blogging-Banner.jpg" alt="jumoh course" />
+        <img
+          src="/img/courses/blogging/Blogging-Banner.jpg"
+          alt="jumoh course"
+        />
       </div>
       <div class="full-course-details width">
         <div class="course-tab flex">
@@ -95,7 +102,22 @@
               <div class="course-video">
                 <div class="video-img">
                   <img src="/img/jpg/team working.jpg" alt="jumoh team" />
-                  <div class="play-btn">hi</div>
+                  <div
+                    class="play-btn"
+                    onclick="openvideo('https://www.youtube.com/embed/PGLeZK_9Y6Q?start=1')"
+                  >
+                    <img src="/img/icons/play.png" alt="" />
+                  </div>
+                </div>
+                <div class="overlay-video">
+                  <div class="cover" onclick="closevideo()"></div>
+                  <iframe
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
                 </div>
               </div>
               <div class="course-description">
@@ -111,22 +133,22 @@
                 <div class="extra">
                   <p>
                     <span>
-                        <span class="course-icon">lll</span>
-                        <span><b>Duration</b></span>
+                      <span class="course-icon">lll</span>
+                      <span><b>Duration</b></span>
                     </span>
                     <span>20Hrs</span>
                   </p>
                   <p>
                     <span>
-                        <span class="course-icon">lll</span>
-                        <span><b>Lessons</b></span>
+                      <span class="course-icon">lll</span>
+                      <span><b>Lessons</b></span>
                     </span>
                     <span>20</span>
                   </p>
                   <p class="price">
                     <span>
-                        <span class="course-icon">lll</span>
-                        <span class="course-icon"><b>Price</b></span>
+                      <span class="course-icon">lll</span>
+                      <span class="course-icon"><b>Price</b></span>
                     </span>
                     <span class="price-figure">$60</span>
                   </p>
@@ -194,20 +216,26 @@
             </div>
           </div>
           <div class="course-instructor width" id="instructor">
-              <h3>Instructor</h3>
+            <h3>Instructor</h3>
             <div class="grid-2">
               <img src="/img/courses/blogging/Philip Omale Samuel.jpg" alt="" />
               <div class="instructor-details">
                 <h3>Philip Omale Samuel</h3>
                 <p class="secondary">
-                   I see myself as a scientist but sometimes, my love for art leaves me lusting at her beauty.
+                  I see myself as a scientist but sometimes, my love for art
+                  leaves me lusting at her beauty.
                 </p>
                 <p>
-                  That fateful night when I was born, my parents received 3 'treasures' via electronic mail from 3 tech giants. The contents of those enticing eMail titles were too good, they happily moved them to "Spam". Lol
-
-                  My name is Philip Omale Samuel I'm an exceptional storyteller. I see myself as a scientist but sometimes, my love for art leaves me lusting at her beauty.
-
-                  While I don't fashion myself as an Author, I do have a couple of books published on Amazon with different pen names. I'm an SEO analyst, Blogger, contributor at BellaNaija and among other things, I'm a Digital Marketing Evangelist.
+                  That fateful night when I was born, my parents received 3
+                  'treasures' via electronic mail from 3 tech giants. The
+                  contents of those enticing eMail titles were too good, they
+                  happily moved them to "Spam". Lol My name is Philip Omale
+                  Samuel I'm an exceptional storyteller. I see myself as a
+                  scientist but sometimes, my love for art leaves me lusting at
+                  her beauty. While I don't fashion myself as an Author, I do
+                  have a couple of books published on Amazon with different pen
+                  names. I'm an SEO analyst, Blogger, contributor at BellaNaija
+                  and among other things, I'm a Digital Marketing Evangelist.
                 </p>
               </div>
             </div>
@@ -283,6 +311,16 @@
           sidenav.style.left = 0;
           cover.style.left = 0;
         }
+      }
+      function closevideo(){
+        var overVideo = document.getElementsByClassName("overlay-video")[0];
+        overVideo.style.display = "none";
+        overVideo.children[1].setAttribute("src","")
+      }
+      function openvideo(src){
+        var overVideo = document.getElementsByClassName("overlay-video")[0];
+        overVideo.style.display = "block";
+        overVideo.children[1].setAttribute("src",src)
       }
     </script>
 
