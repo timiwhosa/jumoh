@@ -52,6 +52,9 @@ p{
     justify-content: center;
     margin-top: -2vh;
     margin-bottom: 2vh;
+    font-size: 45px;
+    font-family: 'Nunito-Black';
+    color: var(--secondary-color);
 }
 .course-details{
     background-color: var(--white);
@@ -150,6 +153,9 @@ p{
 .course-description .extra >*:last-child{
     border: none;
 }
+.course-description .extra img{
+    width: 20px;
+}
 .course-description .extra button{
     width: 60%;
     height: 70px;
@@ -176,7 +182,7 @@ p{
 .course-curriculum ul li{
     display: flex;
     align-items: center;
-    padding-left: 2vw;
+    padding:0 2vw;
 }
 .course-curriculum ul li a{
     display: flex;
@@ -203,6 +209,9 @@ p{
     grid-gap: 20px;
     max-width: 600px;
 }
+.course-instructor p{
+    text-transform: capitalize;
+}
 .course-instructor .instructor-details p:nth-child(2){
     margin: 10px 0 20px;
     font-size: 16px;
@@ -211,6 +220,48 @@ p{
     border-radius: 4px;
     height: 50vh;
     margin-top: 40px;
+}
+
+.enroll-cover{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--blackshadow);
+    z-index: 99999999;
+    display: none;
+}
+.enroll-div{
+    position: fixed;
+    width: var(--width);
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--white);
+    padding: 20px;
+    z-index: 9999999999;
+    box-shadow: 0 8px 16px var(--blackshadow);
+    display: none;
+}
+.enroll-div form{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.enroll-div form input{
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    border: .5px solid var(--primary-color);
+    margin: 20px 0;
+    font-size: 17px;
+}
+.enroll-div form button{
+    justify-content: center;
+    max-width: 200px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){
@@ -229,6 +280,9 @@ p{
 @media only screen and (max-width: 480px){
     :root{
         --width70: 100%;
+    }
+    .course-intro .course-rating{
+        font-size: 30px;
     }
     .course-intro ul{
         width: 100%;
