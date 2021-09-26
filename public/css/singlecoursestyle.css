@@ -221,7 +221,11 @@ p{
     height: 50vh;
     margin-top: 40px;
 }
-
+.course-required li{
+    list-style: decimal;
+    padding: 10px 0;
+    margin-left: 20px;
+}
 .enroll-cover{
     width: 100vw;
     height: 100vh;

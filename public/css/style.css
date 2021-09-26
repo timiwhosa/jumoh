@@ -719,6 +719,135 @@ footer ul li{
     height: auto;
     z-index: 99999;
 }
+
+      
+.about-intro {
+position: relative;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: "right left";
+grid-gap: 2vw;
+width: var(--width);
+min-height: 100vh;
+margin: 0 auto;
+background-color: var(--white);
+padding: 2vw;
+margin: 40px auto;
+}
+.intro-right {
+padding: 10vw 0 10vw 20%;
+grid-area: right;
+}
+.intro-left {
+position: relative;
+height: 70vh;
+max-width: 475px;
+grid-area: left;
+}
+.clip {
+width: 130px;
+height: 400px;
+transform: rotate(30deg);
+background-color: var(--secondary-color);
+position: absolute;
+overflow: hidden;
+border-radius: 200px;
+}
+.clip::before {
+content: "";
+position: absolute;
+width: 260%;
+height: 200%;
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+transform: rotate(-30deg);
+top: -50%;
+left: -50%;
+}
+.clip1 {
+top: 10%;
+left: 0;
+}
+.clip2 {
+left: 40%;
+top: 0;
+}
+.clip3 {
+top: 40%;
+left: 55%;
+}
+.clip4 {
+left: 20%;
+display: none;
+}
+.clip1::before {
+background-image: url("/img/illustrations/35 Self Portrait Ideas for Creative Photographers.jpg");
+}
+.clip2::before {
+background-image: url("/img/illustrations/Jumoh vector1.jpg");
+}
+.clip3::before {
+    background-image: url("/img/jpg/jumoh student 4.jpg");
+    background-position-x: -58px;
+    background-position-y: 56px;
+}
+.clip4::before {
+background-image: url("/img/illustrations/Jumoh vector1.jpg");
+}
+.our-students {
+align-items: center;
+width: 80vw;
+}
+.stud-ctn {
+align-items: center;
+grid-gap: 10px;
+}
+.grid {
+display: grid;
+grid-gap: 10px;
+grid-auto-rows: max-content;
+align-items: center;
+}
+.stud {
+width: 200px;
+height: 250px;
+background-image: url("/img/jpg/jumoh student 1.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+border-radius: 8px;
+overflow: hidden;
+}
+.stud1 {
+background-image: url("/img/jpg/jumoh student 1.jpg");
+}
+.stud2 {
+background-image: url("/img/jpg/jumoh student 2.jpg");
+}
+.stud3 {
+background-image: url("/img/jpg/jumoh student 3.jpg");
+}
+.our-story {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.our-team {
+max-height: none;
+}
+.team .grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 2vw;
+width: 60vw;
+margin: 10vh auto;
+}
+.team-member img {
+height: 300px;
+border-radius: 10px;
+}
+    
 @font-face {
     font-family: "nunito-bold";
     src: url("/css/Nunito-Bold.ttf");
@@ -838,7 +967,43 @@ footer ul li{
     footer .grid-3{
         grid-template-columns: 2fr 1fr;
     }
-
+    .about-intro{
+        grid-template-columns: 1fr;
+        grid-template-areas: "left" "right";
+    }
+    .intro-left{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .clip {
+    width: 32%;
+    height: 60%;
+    }
+    .clip1 {
+    top: 10%;
+    left: 0;
+    }
+    .clip2 {
+    left: 50%;
+    top: 0;
+    }
+    .clip3 {
+    top: 30%;
+    left: 70%;
+    }
+    .intro-right{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .team .grid-3{
+        width: var(--width);
+    }
+    .stud {
+        width: 30vw;
+        height: 40vw;
+    }
 }
 @media screen and (max-width:480px) {
     h1{

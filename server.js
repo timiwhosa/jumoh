@@ -14,6 +14,12 @@ app.use(express.static(public));
 app.get("/", (req, res) => {
     res.sendFile(public + "/index.html");
 })
+app.get("/about", (req, res) => {
+  res.sendFile(public + "/html/about.html");
+});
+app.get("/teach", (req, res) => {
+  res.sendFile(public + "/html/teach.html");
+});
 app.get("/singlecourse/:id", (req, res) => {
   var id = req.params.id;
   res.sendFile(public + "/html/"+ id+".html");
