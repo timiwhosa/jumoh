@@ -1,5 +1,5 @@
 window.addEventListener("scroll", (e) => {
-  if (document.documentElement.scrollTop > 250) {
+  if (document.documentElement.scrollTop > 150) {
     document.querySelector("nav").classList.add("active");
   } else {
     document.querySelector("nav").classList.remove("active");
