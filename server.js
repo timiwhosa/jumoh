@@ -17,6 +17,9 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.sendFile(public + "/html/about.html");
 });
+app.get("/favicon", (req, res) => {
+  res.sendFile(public + "/img/logo/jumoh.ico");
+});
 app.get("/teach", (req, res) => {
   res.sendFile(public + "/html/teach.html");
 });
