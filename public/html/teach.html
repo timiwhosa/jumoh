@@ -5,26 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jumoh || Becoma a teacher</title>
-    <meta name="title" content="Become a tutor in One of the World's Leading virtual Learning Provider">
-<meta name="description" content="Jumoh is a real live learning platform where tech skills like Programming, Design, Animation are taught with real-life practical  exposure.">
-<meta name="keywords" content="Tutor, Teach, earn, Learning , Learning provider, programming, design, graphics Design">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="revisit-after" content="1 days">
-<meta name="author" content="ifotim">
+    <meta
+      name="title"
+      content="Become a tutor in One of the World's Leading virtual Learning Provider"
+    />
+    <meta
+      name="description"
+      content="Jumoh is a real live learning platform where tech skills like Programming, Design, Animation are taught with real-life practical  exposure."
+    />
+    <meta
+      name="keywords"
+      content="Tutor, Teach, earn, Learning , Learning provider, programming, design, graphics Design"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="author" content="ifotim" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208776396-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-208776396-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-208776396-1');
-</script>
+      gtag("config", "UA-208776396-1");
+    </script>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/singlecoursestyle.css" />
-    <link rel="shortcut icon" type="image/jpg" href="/favicon"/>
+    <link rel="shortcut icon" type="image/jpg" href="/favicon" />
   </head>
   <body>
     <nav class="bg-white">
@@ -103,7 +117,7 @@
     <section>
       <center><h3>Become a tutor</h3></center>
       <div class="enroll-div">
-        <form action="">
+        <form action="" id="teach">
           <h3 class="center">Join</h3>
           <label for="name">Name:</label>
           <input
@@ -137,9 +151,12 @@
             placeholder="graphics design,etc"
             required
           />
-          <button class="btn-primary btn flex center" type="submit">
-            <span>Join</span>
-          </button>
+          <div class="flex">
+            <div id="loader"></div>
+            <button class="btn-primary btn flex center" type="submit">
+              <span>Join</span>
+            </button>
+          </div>
         </form>
       </div>
     </section>
@@ -152,7 +169,7 @@
               We are working on Transforming the world of online learning with
               virtual Technology.
             </p>
-            
+
             <div class="social-icons">
               <a href="https://instagram.com/jumoh_ng?utm_medium=copy_link">
                 <img src="/img/social/instagram.png" alt="" />
@@ -187,6 +204,43 @@
       </section>
     </footer>
     <script src="/js/main.js"></script>
+    <script>
+      
+
+      document.getElementById("teach").addEventListener("submit", applytoteach);
+      function applytoteach(e) {
+        e.preventDefault();
+        var name = e.target[0].value;
+        var phone = e.target[1].value;
+        var email = e.target[2].value;
+        var course = e.target[3].value;
+
+        e.target[4].disabled = true;
+        loader("show","loader")
+        var opt = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, phone, email, course }),
+        };
+        fetch("/teach", opt)
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            e.target[4].disabled = false;
+            loader("hide","loader")
+            if (data.status === 200) {
+              success(data.message, "success");
+              window.location.href="/";
+            } else {
+              success(data.message, "error");
+            }
+          });
+      }
+    </script>
+    
 
     <!-- Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/s/photos/team?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
   </body>

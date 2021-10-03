@@ -6,6 +6,21 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
+function success(data, type) {
+  var suc = document.createElement("div");
+  if (type === "error") {
+    suc.setAttribute("class", "message-show bg-secondary white");
+  } else {
+    suc.setAttribute("class", "message-show bg-primary white");
+  }
+  suc.setAttribute("id", `success${Math.floor(Math.random())}`);
+  suc.textContent = data;
+  document.body.append(suc);
+  setTimeout(() => {
+    document.body.removeChild(suc);
+  }, 2000);
+}
+
 var cover = document.getElementsByClassName("cover")[0];
 document
   .getElementsByClassName("menu")[0]
@@ -19,5 +34,13 @@ function sidenavtoogle(e) {
   } else {
     sidenav.style.left = 0;
     cover.style.left = 0;
+  }
+}
+
+function loader(type, id) {
+  if (type === "show") {
+    document.getElementById(id).setAttribute("class", "lds-dual-ring");
+  } else {
+    document.getElementById(id).removeAttribute("class", "lds-dual-ring");
   }
 }

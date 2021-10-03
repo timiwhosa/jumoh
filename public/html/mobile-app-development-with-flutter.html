@@ -346,7 +346,7 @@ No prior knowledge or experience is required , you will learn the basic of Progr
 
     <div class="enroll-cover" onclick="closeenroll(this)"></div>
     <div class="enroll-div">
-      <form action="">
+      <form action="" id="enroll-form">
         <h3 class="center">Enroll</h3>
         <label for="name">Name:</label>
         <input type="text" name="" id="name" placeholder="Your Full name (show on certificate)" required>
@@ -354,12 +354,16 @@ No prior knowledge or experience is required , you will learn the basic of Progr
         <input type="number" name="" id="phone" placeholder="090 XXX XXX" required>
         <label for="name">Email:</label>
         <input type="email" name="" id="name" placeholder="help@jumoh.com" required>
-        <button class="btn-primary btn flex center" type="submit"><span>Register</span></button>
+        <div class="flex">
+          <div id="loader"></div>
+          <button class="btn-primary btn flex center" type="submit"><span>Register</span></button>
+        </div>
+        
       </form>
     </div>
 
     <script src="/js/main.js"></script>
-    <script src="/js/general.js"></script>
+    <script src="/js/courses.js"></script>
 
     <!-- Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/s/photos/team?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
   </body>
