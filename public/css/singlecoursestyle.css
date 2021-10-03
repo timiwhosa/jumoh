@@ -209,9 +209,9 @@ p{
     grid-gap: 20px;
     max-width: 600px;
 }
-.course-instructor p{
+/* .course-instructor p{
     text-transform: capitalize;
-}
+} */
 .course-instructor .instructor-details p:nth-child(2){
     margin: 10px 0 20px;
     font-size: 16px;
