@@ -48,7 +48,7 @@ app.post("/teach", jsonParser, (req, res) => {
     });
     var options = {
       from: "ifotim21@gmail.com",
-      to: "timiwhosa@gmail.com ",
+      to: "careers@jumoh.com ",
       subject: "Jumoh New Tutor Application ",
       //{ name: 'hi', phone: '090', email: 'hi@gmail.com', course: 'hi' }
       text: `name:${data.name}, phone Number:${data.phone}, email:${data.email}, course:${data.course} `,
@@ -115,5 +115,5 @@ app.post("/enroll", jsonParser, (req, res) => {
 });
 
 app.listen(Port, () => {
-  console.log("app");
+  console.log("ifotim");
 });
