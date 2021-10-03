@@ -75,7 +75,6 @@ app.post("/teach", jsonParser, (req, res) => {
 });
 
 app.post("/enroll", jsonParser, (req, res) => {
- 
   var defaultClient = SibApiV3Sdk.ApiClient.instance;
   async function enroll() {
     let apiKey = defaultClient.authentications["api-key"];
@@ -84,13 +83,13 @@ app.post("/enroll", jsonParser, (req, res) => {
     var apiInstance = new SibApiV3Sdk.ContactsApi();
 
     var createContact = new SibApiV3Sdk.CreateContact();
-    
+
     createContact = {
       email: req.body.email,
       attributes: {
-        // SMS: 09094888047,
-        FNAME: req.body.name,
-        LNAME: req.body.number,
+        SMS: req.body.number,
+        FIRSTNAME: req.body.name.split(" ")[0],
+        LASTNAME: req.body.name.split(" ")[1],
       },
       listIds: [req.body.id],
       emailBlacklisted: false,
@@ -103,7 +102,24 @@ app.post("/enroll", jsonParser, (req, res) => {
         console.log(
           "API called successfully. Returned data: " + JSON.stringify(data)
         );
-        res.json({ message: "enrollment request received ", status: 200 });
+        let listId = [parseInt(req.body.id)];
+
+        let contactEmails = new SibApiV3Sdk.AddContactToList();
+
+        contactEmails.emails = [req.body.email];
+
+        apiInstance.addContactToList(listId, contactEmails).then(
+          function (data) {
+            console.log(
+              "API called successfully. Returned data: " + JSON.stringify(data)
+            );
+            res.json({ message: "enrollment request received ", status: 200 });
+          },
+          function (error) {
+            console.error(error.response.body);
+            res.json({ message: error.response.body.message, status: 501 });
+          }
+        );
       },
       function (error) {
         console.error(error.response.body);
@@ -111,7 +127,9 @@ app.post("/enroll", jsonParser, (req, res) => {
       }
     );
   }
-  enroll();
+  if (req.body.name.split(" ")[1]) {
+    enroll();
+  }
 });
 
 app.listen(Port, () => {

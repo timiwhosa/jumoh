@@ -577,6 +577,8 @@ nav .nav-ctn-left p:hover{
     position: relative;
     min-height: 100vh;
     padding: 20vh 0 10vh;
+    display: flex;
+    align-items: center;
 }
 .video-img{
     width: 60%;
@@ -880,7 +882,15 @@ border-radius: 10px;
   animation: lds-dual-ring 1.2s linear infinite;
   margin-left: 10px;
 }
-
+#iframeVideo{
+    margin: 0 auto;
+    width: 50vw;
+    height: 30vw;
+    max-width: 500px;
+    max-height: 300px;
+    min-height: 200px;
+    min-width: 200px;
+}
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
@@ -1078,6 +1088,16 @@ border-radius: 10px;
     footer .grid-3{
         grid-template-columns: 1fr;
     }
+    #iframeVideo {
+        margin: 0 auto;
+        width: var(--width);
+        height: 60vw;
+        max-width: 500px;
+        max-height: 300px;
+        min-height: 200px;
+        min-width: 200px;
+    }
+    
     /* @-webkit-keyframes logoUp {
         0%   { top: -30%; }
         50% { top: -50%; }

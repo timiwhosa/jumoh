@@ -51,8 +51,15 @@ function openvideo(src) {
 document.getElementById("enroll-form").addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(e);
+  var numb = (num) => {
+    if (parseInt(num.split("")[0]) === 0) {
+      return num.substring(1)
+    } else {
+      return num
+    }
+  }
   var name = e.target[0].value;
-  var number = e.target[1].value;
+  var number = "+234" + numb(e.target[1].value);
   var email = e.target[2].value;
   var button = e.target[3];
   var id = e.target.getAttribute("class");
@@ -76,9 +83,20 @@ document.getElementById("enroll-form").addEventListener("submit", (e) => {
       loader("hide", "loader");
       if (data.status === 200) {
         success(data.message, "success");
-        // window.location.href = "/";
       } else {
         success(data.message, "error");
       }
     });
 });
+
+Object.entries(document.getElementsByClassName("course-tab")[0].children).forEach((obj) => {
+  obj[1].addEventListener("click", ()=> scrolltocourseSection(obj[1].textContent.trim().toLowerCase()));
+});
+function scrolltocourseSection(targetid) {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var dimension = document
+    .getElementById(`${targetid}`)
+    .getBoundingClientRect();
+  document.documentElement.scrollTop = dimension.top + scrollTop;
+  console.log(dimension)
+}
