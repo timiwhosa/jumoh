@@ -1,4 +1,4 @@
-var countDownDate = new Date("Oct 4, 2021 00:00:00").getTime();
+var countDownDate = new Date("Oct 01, 2021 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -21,7 +21,7 @@ var x = setInterval(function () {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementsByClassName("course-rating")[0].innerHTML = "Ongoing";
   }
 }, 1000);
 function closeenroll(e) {
@@ -98,5 +98,5 @@ function scrolltocourseSection(targetid) {
     .getElementById(`${targetid}`)
     .getBoundingClientRect();
   document.documentElement.scrollTop = dimension.top + scrollTop;
-  console.log(dimension)
+  // console.log(dimension)
 }

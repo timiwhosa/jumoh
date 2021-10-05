@@ -1073,6 +1073,14 @@ border-radius: 10px;
     nav .nav-search form input{
         display: none;
     }
+    .hero-section{
+        margin-top: 0;
+        min-height: auto;
+    }
+    .hero{
+        min-height: auto;
+        margin: 0;
+    }
     .jumoh-section-title{
         padding: 10vh 4vw 5vh;
     }

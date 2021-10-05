@@ -316,5 +316,7 @@ p{
     .course-instructor{
         padding-top: 20px;
     }
-
+    .course-intro{
+        height: 48vh;
+    }
 }
