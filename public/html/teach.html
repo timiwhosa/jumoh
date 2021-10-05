@@ -43,7 +43,7 @@
   <body>
     <nav class="bg-white">
       <div class="nav-logo">
-        <a href="/"><img src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
+        <a href="/"><img loading="lazy" src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
       </div>
       <div class="nav-ctn flex">
         <!-- <div class="nav-search">
@@ -55,7 +55,7 @@
               placeholder="Search for Courses"
             />
             <button type="submit">
-              <img src="/img/icons/search.png" alt="search-icon" />
+              <img loading="lazy" src="/img/icons/search.png" alt="search-icon" />
             </button>
           </form>
         </div> -->
@@ -72,7 +72,7 @@
         <div class="nav-ctn-right hide-on-small">
           <a href="/#courses">
             <button class="btn btn-primary flex bg-secondary">
-              <span><img src="/img/icons/user.png" alt="" /></span>
+              <span><img loading="lazy" src="/img/icons/user.png" alt="" /></span>
               <span>Register</span>
             </button>
           </a>
@@ -82,7 +82,7 @@
     <div class="cover"></div>
     <div class="side-nav hide-on-large">
       <div class="logo">
-        <a href="/"><img src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
+        <a href="/"><img loading="lazy" src="/img/logo/JUMOH 1.png" alt="Jumoh logo" /></a>
       </div>
       <ul>
         <a href="/"
@@ -164,7 +164,7 @@
       <section class="footer-section width">
         <div class="grid-3 white">
           <div class="footer-brand">
-            <img src="/img/logo/JUMOH white.png" alt="" />
+            <img loading="lazy" src="/img/logo/JUMOH white.png" alt="" />
             <p>
               We are working on Transforming the world of online learning with
               virtual Technology.
@@ -172,13 +172,13 @@
 
             <div class="social-icons">
               <a href="https://instagram.com/jumoh_ng?utm_medium=copy_link">
-                <img src="/img/social/instagram.png" alt="" />
+                <img loading="lazy" src="/img/social/instagram.png" alt="" />
               </a>
               <a href="https://web.facebook.com/jumoh-104173305366316">
-                <img src="/img/social/facebook.png" alt="" />
+                <img loading="lazy" src="/img/social/facebook.png" alt="" />
               </a>
               <a href="https://www.linkedin.com/company/80143748">
-                <img src="/img/social/linkedin.png" alt="" />
+                <img loading="lazy" src="/img/social/linkedin.png" alt="" />
               </a>
             </div>
           </div>
@@ -233,7 +233,6 @@
             loader("hide","loader")
             if (data.status === 200) {
               success(data.message, "success");
-              window.location.href="/";
             } else {
               success(data.message, "error");
             }

@@ -97,6 +97,6 @@ function scrolltocourseSection(targetid) {
   var dimension = document
     .getElementById(`${targetid}`)
     .getBoundingClientRect();
-  document.documentElement.scrollTop = dimension.top + scrollTop;
+  document.documentElement.scrollTop = dimension.top + ( scrollTop * 0.6) ;
   // console.log(dimension)
 }
