@@ -161,6 +161,7 @@ img{
 }
 .btn-primary:hover{
     box-shadow: 10px 10px 25px var(--primary-light);
+    color: var(--white);
     /* box-shadow:var(--bsh) ; */
 }
 .btn-primary:hover::after{
@@ -461,6 +462,9 @@ nav .nav-ctn-left p:hover{
     max-width: 390px;
     padding: 0;
     margin: 0;
+}
+.course button.btn-primary{
+    box-shadow: 5px 5px 15px rgb(255 69 0 / 68%);
 }
 .course>img{
     min-height: 170px;
