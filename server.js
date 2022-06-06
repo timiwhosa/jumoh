@@ -40,7 +40,7 @@ app.post("/teach", jsonParser, (req, res) => {
       service: "gmail",
       auth: {
         user: "ifotim21@gmail.com",
-        pass: "/ilovejesus1234.",
+        pass: `${process.env.Email_Password}`,
       },
       tls: {
         rejectUnauthorized: false,
